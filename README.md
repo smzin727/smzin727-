@@ -3,5 +3,8 @@
 #Professor: Thiago
 #Aluno: Davi Martins de Oliveira
 
-<img width="1600" height="1485" alt="Foto de Davi" src="https://github.com/user-attachments/assets/0c716b57-314c-490d-aeb3-dcc801ecceb0" />
-<img width="430" height="960" alt="image" src="https://github.com/user-attachments/assets/a7a48b6b-c608-4f26-b136-55bc7ad1c142" />
+
+
+
+<img width="800" height="800" alt="Foto de Davi" src="https://github.com/user-attachments/assets/0c716b57-314c-490d-aeb3-dcc801ecceb0" />
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/a7a48b6b-c608-4f26-b136-55bc7ad1c142" />
