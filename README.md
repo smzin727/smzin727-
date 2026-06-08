@@ -1,6 +1,9 @@
 #Descrição: O objetivo do meu app é auxiliar na organização a nível pessoal e empresarial, de forma a elevar o desempenho na entrega das demandas
+
 #Discilina: Projeto interface web
+
 #Professor: Thiago
+
 #Aluno: Davi Martins de Oliveira
 
 
