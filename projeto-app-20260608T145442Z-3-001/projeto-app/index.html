@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus - Sign In</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .auth-logo-area {
+      text-align: center;
+      margin: var(--spacing-xl) 0;
+    }
+    .logo-icon {
+      width: 64px;
+      height: 64px;
+      background-color: var(--primary);
+      border-radius: var(--radius-lg);
+      margin: 0 auto var(--spacing-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .auth-title { font-size: 32px; font-weight: 800; color: var(--primary); margin-bottom: var(--spacing-xs); }
+    .auth-subtitle { font-size: 14px; color: var(--on-surface-variant); padding: 0 var(--spacing-xl); }
+    .auth-options { display: flex; justify-content: space-between; align-items: center; padding: 0 var(--margin-mobile); font-size: 14px; }
+    .divider-container { display: flex; align-items: center; text-align: center; margin: var(--spacing-lg) var(--margin-mobile); color: var(--outline); font-size: 14px; }
+    .divider-container::before, .divider-container::after { content: ''; flex: 1; border-bottom: 1px solid var(--outline-variant); }
+    .divider-container:not(:empty)::before { margin-right: .5em; }
+    .divider-container:not(:empty)::after { margin-left: .5em; }
+    .btn-oauth { background-color: transparent; border: 1px solid var(--outline-variant); color: var(--on-surface); border-radius: var(--radius-default); padding: var(--spacing-md); margin: 0 var(--margin-mobile) var(--spacing-sm); display: flex; align-items: center; justify-content: center; gap: var(--spacing-sm); font-weight: 500; cursor: pointer; font-size: 14px; }
+    .auth-footer { text-align: center; font-size: 14px; margin-top: var(--spacing-lg); }
+    .copyright { text-align: center; font-size: 10px; color: var(--outline); margin-top: auto; padding-bottom: var(--spacing-lg); letter-spacing: 0.05em;}
+  </style>
+</head>
+<body>
+  <div class="app-container" style="padding-bottom: 0;">
+    <div class="auth-logo-area">
+      <div class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+      </div>
+      <h2 class="auth-title">Focus</h2>
+      <p class="auth-subtitle">Embrace productive serenity. Your day, simplified.</p>
+    </div>
+
+    <form id="loginForm" onsubmit="event.preventDefault(); window.location.href='pages/lista-de-tarefas.html';">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input-control" value="hello@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="input-control" value="••••••••" required>
+      </div>
+
+      <div class="auth-options">
+        <label style="display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--on-surface-variant)">
+          <input type="checkbox" checked style="accent-color: var(--primary);"> Remember me
+        </label>
+        <a href="#" style="color: var(--secondary); text-decoration: none; font-weight: 500;">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn-primary">
+        Sign In 
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </form>
+
+    <div class="divider-container">or continue with</div>
+
+    <button class="btn-oauth" onclick="window.location.href='pages/lista-de-tarefas.html'">
+      <span style="font-weight: bold; color: #4285F4;">G</span> Google
+    </button>
+    <button class="btn-oauth" onclick="window.location.href='pages/lista-de-tarefas.html'">
+      Apple
+    </button>
+    <button class="btn-oauth" onclick="window.location.href='pages/lista-de-tarefas.html'">
+      Email
+    </button>
+
+    <p class="auth-footer">New to Focus? <a href="#" style="color: var(--secondary); text-decoration: none; font-weight: 600;">Create an account</a></p>
+    
+    <div class="copyright">©2026 FOCUS PRODUCTIVITY. ALL RIGHTS RESERVED.</div>
+  </div>
+</body>
+</html>

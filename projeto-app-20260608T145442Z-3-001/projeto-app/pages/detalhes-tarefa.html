@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus - Detalhes da Tarefa</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .detail-banner { height: 160px; background-color: var(--surface-dim); margin: 0 var(--margin-mobile) var(--spacing-lg); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold; }
+    .pill-container { display: flex; gap: var(--spacing-sm); padding: 0 var(--margin-mobile); margin-bottom: var(--spacing-md); }
+    .prio-pill { flex: 1; text-align: center; padding: var(--spacing-sm); background-color: var(--surface-container-high); border-radius: var(--radius-default); font-size: 14px; }
+    .prio-pill.active { background-color: #a7d7fd; border: 2px solid var(--secondary); font-weight: bold; }
+    .subtask-list { padding: 0 var(--margin-mobile); margin-bottom: var(--spacing-lg); }
+    .sub-item { background: white; padding: var(--spacing-md); border-radius: var(--radius-default); display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-xs); box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .sub-item.done span { text-decoration: line-through; color: var(--outline); }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <button class="icon-btn" onclick="window.location.href='lista-de-tarefas.html'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      </button>
+      <h1 style="font-size: 20px;">Task Details</h1>
+      <button class="icon-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+    </header>
+
+    <div class="detail-banner">Notebook & Pen Area</div>
+
+    <div class="form-group">
+      <label>TASK TITLE</label>
+      <div class="input-control" style="background-color: var(--surface-container-low); font-weight: 700;">Weekly Grocery Shopping</div>
+    </div>
+
+    <div class="form-group">
+      <label>DESCRIPTION</label>
+      <div class="input-control" style="background-color: var(--surface-container-low); font-size: 14px; line-height: 1.5;">Restock kitchen essentials for the upcoming week. Focus on healthy snacks, fresh produce, and ingredients for meal prep Sunday.</div>
+    </div>
+
+    <div class="form-group">
+      <label>DEADLINE</label>
+      <div class="input-control" style="background-color: var(--surface-container-low); display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        March 24, 2024 <br><span style="font-size: 12px; color: var(--outline);">10:00 AM</span>
+      </div>
+    </div>
+
+    <label style="margin-left: var(--margin-mobile); font-size: 14px; font-weight: 600; color: var(--primary);">PRIORITY LEVEL</label>
+    <div class="pill-container" style="margin-top: 8px;">
+      <div class="prio-pill">Low</div>
+      <div class="prio-pill active">Medium</div>
+      <div class="prio-pill">High</div>
+    </div>
+
+    <div class="subtask-list">
+      <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--primary)">
+        <span>SUB-TASKS (2/4)</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </div>
+      <div class="sub-item done"><span>Organic spinach and kale</span><div class="checkbox-round checked"></div></div>
+      <div class="sub-item done"><span>Greek yogurt (plain)</span><div class="checkbox-round checked"></div></div>
+      <div class="sub-item"><span>Whole grain bread</span><div class="checkbox-round"></div></div>
+      <div class="sub-item"><span>Almond milk (unsweetened)</span><div class="checkbox-round"></div></div>
+    </div>
+
+    <div style="display: flex; gap: var(--spacing-sm); padding: var(--spacing-md) var(--margin-mobile);">
+      <button class="btn-primary" style="background-color: transparent; border: 2px solid var(--error); color: var(--error); width: 40%; margin: 0; box-shadow: none;" onclick="window.location.href='lista-de-tarefas.html'">Delete Task</button>
+      <button class="btn-primary" style="width: 60%; margin: 0;" onclick="window.location.href='lista-de-tarefas.html'">Save Changes</button>
+    </div>
+  </div>
+</body>
+</html>

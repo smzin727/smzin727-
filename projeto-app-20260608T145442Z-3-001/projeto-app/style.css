@@ -1,0 +1,279 @@
+/* @import para a tipografia oficial */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Cores do Sistema de Design */
+  --surface: #f9fbe6;
+  --surface-dim: #d9dcc7;
+  --surface-bright: #f9fbe6;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f3f5e0;
+  --surface-container: #eef0db;
+  --surface-container-high: #e8ead5;
+  --surface-container-highest: #e2e4d0;
+  --on-surface: #1a1d10;
+  --on-surface-variant: #42474d;
+  --inverse-surface: #2f3224;
+  --inverse-on-surface: #f0f2de;
+  --outline: #72787d;
+  --outline-variant: #c2c7cd;
+  --surface-tint: #3f627c;
+  --primary: #1c415a;
+  --on-primary: #ffffff;
+  --primary-container: #355872;
+  --on-primary-container: #aacdec;
+  --inverse-primary: #a7cbe9;
+  --secondary: #316384;
+  --on-secondary: #ffffff;
+  --secondary-container: #a7d7fd;
+  --on-secondary-container: #2b5e7f;
+  --tertiary: #004261;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #0a5a82;
+  --on-tertiary-container: #93d0fe;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  
+  /* Bordas Arredondadas */
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Espaçamentos Modulares */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --margin-mobile: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-container-low) 100%);
+  color: var(--on-surface);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container de simulação Mobile-First */
+.app-container {
+  width: 100%;
+  max-width: 430px; /* Base iPhone 14/15 Pro */
+  min-height: 100vh;
+  background-color: var(--surface);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px; /* Margem para navegação inferior fixa */
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.03);
+}
+
+/* Cabeçalho Base */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg) var(--margin-mobile) var(--spacing-md);
+}
+
+.app-header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inputs e Formulários */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+  padding: 0 var(--margin-mobile);
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.input-control {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: rgba(0, 75, 111, 0.06); /* Tertiary com opacidade */
+  border: 2px solid transparent;
+  border-radius: var(--radius-default);
+  font-size: 16px;
+  color: var(--on-surface);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-control:focus {
+  border-color: var(--secondary);
+  background-color: var(--surface-container-lowest);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: calc(100% - (var(--margin-mobile) * 2));
+  margin: var(--spacing-md) var(--margin-mobile);
+  box-shadow: 0px 4px 12px rgba(28, 65, 90, 0.15);
+  transition: transform 0.1s ease;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Barra de Navegação Inferior */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  height: 76px;
+  background-color: var(--surface-container-low);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid var(--surface-container-highest);
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--on-surface-variant);
+  font-size: 12px;
+  font-weight: 600;
+  gap: var(--spacing-xs);
+  flex: 1;
+  padding: var(--spacing-sm) 0;
+}
+
+.nav-item.active {
+  color: var(--primary);
+}
+
+.nav-item .nav-icon-wrapper {
+  padding: 6px 20px;
+  border-radius: var(--radius-full);
+  transition: background-color 0.2s ease;
+}
+
+.nav-item.active .nav-icon-wrapper {
+  background-color: var(--secondary-container);
+}
+
+/* Elementos do Card de Tarefas */
+.task-card {
+  background-color: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin: 0 var(--margin-mobile) var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 20px rgba(28, 65, 90, 0.04);
+  border-left: 4px solid var(--secondary);
+  transition: all 0.2s ease;
+}
+
+.task-card.completed {
+  opacity: 0.6;
+}
+
+.task-card.completed .task-text {
+  text-decoration: line-through;
+  color: var(--on-surface-variant);
+}
+
+.checkbox-round {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--outline-variant);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.checkbox-round.checked {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.checkbox-round.checked::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Botão de Ação Flutuante (FAB) */
+.fab {
+  position: fixed;
+  bottom: 96px;
+  right: calc(50% - 215px + var(--margin-mobile));
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary-container);
+  color: var(--on-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: none;
+  z-index: 99;
+}
+
+@media (max-width: 430px) {
+  .fab {
+    right: var(--margin-mobile);
+  }
+}

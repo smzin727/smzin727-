@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus - Nova Tarefa</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .banner-placeholder { height: 120px; background: linear-gradient(135deg, #eef0db, #d9dcc7); margin: 0 var(--margin-mobile) var(--spacing-lg); border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+    .banner-plant { position: absolute; right: 10px; bottom: 0; width: 60px; opacity: 0.7; }
+    .deadline-row { display: flex; gap: var(--spacing-md); padding: 0 var(--margin-mobile); margin-bottom: var(--spacing-lg); }
+    .priority-selector { display: flex; flex-direction: column; gap: var(--spacing-sm); padding: 0 var(--margin-mobile); margin-bottom: var(--spacing-lg); }
+    .priority-option { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md); background-color: var(--surface-container-low); border-radius: var(--radius-default); cursor: pointer; }
+    .priority-option.selected { background-color: #a7d7fd; color: var(--tertiary); font-weight: bold; }
+    .subtask-builder { padding: 0 var(--margin-mobile); }
+    .subtask-row { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-sm); }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <button class="icon-btn" onclick="window.location.href='lista-de-tarefas.html'">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <h1 style="font-size: 20px;">Focus</h1>
+      <span style="font-weight: 700; color: var(--primary); cursor: pointer;" onclick="window.location.href='lista-de-tarefas.html'">SAVE</span>
+    </header>
+
+    <div class="banner-placeholder">
+      <div style="padding: var(--spacing-md); font-weight: bold; color: var(--primary);">Fresh Beginnings</div>
+    </div>
+
+    <div class="form-group">
+      <label>TASK TITLE</label>
+      <input type="text" class="input-control" placeholder="Task Title">
+    </div>
+
+    <div class="form-group">
+      <label>DESCRIPTION</label>
+      <textarea class="input-control" rows="3" placeholder="Description..." style="resize: none;"></textarea>
+    </div>
+
+    <h3 style="font-size: 14px; font-weight: 700; margin: 0 var(--margin-mobile) var(--spacing-sm); color: var(--primary);">Deadline</h3>
+    <div class="deadline-row">
+      <div style="flex: 1;">
+        <span style="font-size: 11px; color: var(--outline);">Start</span>
+        <input type="text" class="input-control" value="XX/XX" style="padding: var(--spacing-sm);">
+      </div>
+      <div style="flex: 1;">
+        <span style="font-size: 11px; color: var(--outline);">End</span>
+        <input type="text" class="input-control" value="XX/XX" style="padding: var(--spacing-sm);">
+      </div>
+    </div>
+
+    <h3 style="font-size: 14px; font-weight: 700; margin: 0 var(--margin-mobile) var(--spacing-sm); color: var(--primary);">Priority</h3>
+    <div class="priority-selector">
+      <div class="priority-option"><span>Low</span><input type="radio" name="prio"></div>
+      <div class="priority-option selected"><span>Medium</span><input type="radio" name="prio" checked></div>
+      <div class="priority-option"><span>High</span><input type="radio" name="prio"></div>
+    </div>
+
+    <div class="subtask-builder">
+      <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; margin-bottom: var(--spacing-sm);">
+        <span>Tasks</span><span style="color: var(--outline);">0 of 2 completed</span>
+      </div>
+      <div class="subtask-row">
+        <input type="text" class="input-control" value="Prepare project presentation" style="background-color: white; border: 1px solid var(--outline-variant);">
+      </div>
+      <div class="subtask-row">
+        <input type="text" class="input-control" value="Review team emails" style="background-color: white; border: 1px solid var(--outline-variant);">
+      </div>
+    </div>
+
+    <div style="display: flex; gap: var(--spacing-sm); padding: var(--spacing-md) var(--margin-mobile);">
+      <button class="btn-primary" style="background-color: var(--surface-container-high); color: var(--on-surface); width: 35%; margin: 0;" onclick="window.location.href='lista-de-tarefas.html'">DISCARD</button>
+      <button class="btn-primary" style="width: 65%; margin: 0;" onclick="window.location.href='lista-de-tarefas.html'">SAVE TASK</button>
+    </div>
+  </div>
+</body>
+</html>
