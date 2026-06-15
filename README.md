@@ -13,7 +13,7 @@ Projeto de Interface Web - 2º Ano Técnico em Informática
 Professor: Thiago Guimarães Tavares
 Aluno: Davi Martins de Oliveira
 
-<img width="1600" height="1485" alt="Foto de Davi" src="https://github.com/user-attachments/assets/191191f4-a59f-4020-ac6f-a7192cc55726" />
+<img alt="Foto de Davi" src="https://github.com/user-attachments/assets/191191f4-a59f-4020-ac6f-a7192cc55726" style="max-width: " 80%; height: auto;"/>
 
 
 
