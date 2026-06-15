@@ -1,4 +1,5 @@
-Aplicativo de lista de tarefas: Focus
+<h1>Aplicativo de lista de tarefas: Focus</h1>
+<hr>
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; width: 100%;">
     <img src="https://github.com/user-attachments/assets/bcd5fbe7-b3c3-4678-8e31-800efaff5465" alt="Tela 1" style="max-width: 45%; height: auto;">
