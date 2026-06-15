@@ -18,4 +18,22 @@ Projeto de Interface Web - 2º Ano Técnico em Informática
 
 <img src="https://github.com/user-attachments/assets/191191f4-a59f-4020-ac6f-a7192cc55726" alt="Foto do Davi" style="max-width: 80%; height: auto;"/>
 
+O projeto foi projetado utilizando uma folha de caderno comum como ferramenta de prototipagem inicial, desenvolvendo o modelo de baixa fidelidade
+
+Posteriormente utilizou-se o Google Stitch como ferramenta para criar a interface grafica e identidade visual do aplicativo.
+
+Na sequência foi utilizado o google gemini para criação do aplicativo em si.
+
+<h1>Para rodar localmente</h1>
+<ul>
+    <li>Baixe essa pasta de arquivos no repositório e abra no vs code</li>
+    <li><h3>Prerequisitos:</h3></li>
+    <li>1.Instale a extensão live serve no vs code</li>
+    <li>2.Vá para o arquivo index.html e aperte sobre o código com o botão direito do mouse e aperte para abrir com live serve</li>
+    <li>3.Insira a url informada ao final do comando no seu navedor de internet</li>
+
+    
+</ul>
+
+
 
