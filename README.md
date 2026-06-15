@@ -16,12 +16,4 @@ Aluno: Davi Martins de Oliveira
 <img src="https://github.com/user-attachments/assets/191191f4-a59f-4020-ac6f-a7192cc55726" alt="Foto do Davi" style="max-width: 80%; height: auto;"/>
 
 
-
-
-
-
-
-
-
-<img width="800" height="800" alt="Foto de Davi" src="https://github.com/user-attachments/assets/0c716b57-314c-490d-aeb3-dcc801ecceb0" />
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/a7a48b6b-c608-4f26-b136-55bc7ad1c142" />
