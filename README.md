@@ -19,11 +19,6 @@ Aluno: Davi Martins de Oliveira
 
 
 
-#Discilina: Projeto interface web
-
-#Professor: Thiago
-
-#Aluno: Davi Martins de Oliveira
 
 
 
